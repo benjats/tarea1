@@ -6,9 +6,14 @@ def es_primo(numero):
             return False
     return True
 
-# Ejemplo de uso
+def imprimir_numeros_primos_hasta_cero(numero):
+    numeros_primos = []
+    for i in range(numero, 0, -1):
+        if es_primo(i):
+            numeros_primos.append(i)
+    print(numeros_primos)
+
 numero = int(input("Ingrese un número: "))
-if es_primo(numero):
-    print(numero, "es un número primo.")
-else:
-    print(numero, "no es un número primo.")
+imprimir_numeros_primos_hasta_cero(numero)
+
+    
